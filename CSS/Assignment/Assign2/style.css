@@ -1,0 +1,70 @@
+*{
+   margin: 0px;
+   padding: 0px;
+}
+
+ul {
+   list-style-position: inside;
+   margin: 0;
+   padding: 0;
+}
+
+#wrapper{
+   width: 950px;
+   background-color: Gainsboro;
+   margin: 0px auto;
+   overflow:hidden;
+   height:auto;
+   padding:10px;
+}
+#header{
+   background-color: Silver;
+   border-radius: 5px;
+   padding: 15px 10px;
+   margin: 10px;
+   margin-left: 0px;
+   font-size:1.3em;
+}  
+
+#navigation{
+   background-color: Silver;
+   display: inline-block;
+   border-radius: 5px;
+   padding: 15px;
+   margin: 10px;
+   margin-left: 0px;
+   width:240px;
+   line-height: 145%;
+}
+
+#main_content{
+   background-color: Grey;
+   display: inline-block;
+   border-radius: 5px;
+   margin: 10px;
+   padding: 10px;
+   width: 630px;
+   vertical-align: top;
+}
+
+#contact{
+   background-color: Silver;
+   border-radius: 5px;
+   margin: 10px;
+   margin-left:0px;
+   padding: 10px;
+   width:920;
+}
+
+#secondary_navi{
+   margin:0em 1em;
+}
+
+#article_list li{
+   margin:1.2em 1.5em;
+}
+
+#main_content .article_title{
+   margin:25px 0px;
+   font-size:2em;
+}
