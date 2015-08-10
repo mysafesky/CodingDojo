@@ -1,0 +1,14 @@
+1. Go to github and create a repo call "basic_repo"
+2. then go to terminal
+3. mkdir basic_repo
+4. cd basic_repo
+5. git init
+6. vi README.MD
+7. git add -A
+8. git commit -m "first commit"
+9. git remote add origin https://github.com/mysafesky/basic_repo.git
+10. git push -u origin master
+11. vi README.MD
+12. git add -A
+13. git commit -m "make some changes"
+13. git push

@@ -1,0 +1,31 @@
+*{
+   margin: 0px;
+   padding: 0px;
+}
+
+.prac_container{
+	width: 50%;
+	margin:30px;
+	border-bottom: 2px solid black;
+}
+
+.prac_container h1{
+	text-align: center;
+	margin: auto;
+}
+
+.prac_container button{
+	display:inline-block;
+	margin-left: 30px;
+	margin-right:30px;
+}
+
+.prac_container p{
+	display: inline-block;
+	margin-right:30px;
+	border:1px solid red;
+}
+
+.red{
+	color: red;
+}

@@ -1,0 +1,5 @@
+// Web version
+1. Go to: https://github.com/jjun14/git_demo
+2. Fork
+3. Make change through github online editor and commit
+4. Create a pull request.

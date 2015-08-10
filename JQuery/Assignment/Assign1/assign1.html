@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8" >
+		<title>My First JQuery Practice</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+      			$('#add_class').click(function(){
+          			$('#add_class_subject').addClass("red");
+  				})
+
+      			$('#after').click(function(){
+          			$("#after_subject").after("hello");
+  				})
+
+  				$('#append').click(function(){
+          			$("#append_subject").append("hello");
+  				})
+
+  				$('#attr').click(function(){
+	          		$("#attr_subject").attr("class","red");
+	          		$("#extra_space_attr").html( ".attr: <b>"+$("#attr_subject").attr("id"));
+  				})
+
+				$('#before').click(function(){
+          			$("#before_subject").before("hello");
+  				})
+
+  				$('#html').click(function(){
+	          		$("#html_subject").attr("class","red");
+	          		$("#extra_space_html").html( ".attr: <b>"+$("#html_subject").attr("id"));
+  				})
+
+  				$('#text').click(function(){
+          			$("#text_subject").text($("#text_subject").text());
+  				})
+
+  				$('#val').click(function(){
+          			$("#extra_space_val").html($("#val_subject").val());
+  				})
+
+  				$('#toggle').click(function(){
+          			$("#toggle_subject").toggle("slow");
+  				})
+
+  				$('#hide').click(function(){
+          			$("#hide_subject").hide();
+  				})
+
+  				$('#show').click(function(){
+          			$("#hide_subject").show();
+  				})
+
+  				$('#slide_up').click(function(){
+          			$("#slide_subject").slideUp("slow");
+  				})
+
+  				$('#slide_down').click(function(){
+          			$("#slide_subject").slideDown("slow");
+  				})
+
+  				$('#slide_toggle').click(function(){
+          			$("#slide_subject").slideToggle("slow");
+  				})
+
+				$('#fade_in').click(function(){
+          			$("#fade_subject").fadeIn("slow");
+  				})
+
+  				$('#fade_out').click(function(){
+          			$("#fade_subject").fadeOut("slow");
+  				})
+
+  				$('#focus').click(function(){
+          			$("#survey_name").focus();
+  				})
+  			})
+		</script>
+	</head>
+	<body>
+		<div id="main_container">
+			<div class="prac_container">
+				<h1>AddClass</h1>
+				<button id="add_class">AddClass</button>
+				<p id="add_class_subject">Click button and add class "red" to this paragraph!</p>
+			</div>
+			<div class="prac_container">
+				<h1>After</h1>
+				<button id="after">After</button>
+				<p id="after_subject">Click button and add "Hello" after to this paragraph</p>
+			</div>
+			<div class="prac_container">
+				<h1>Append</h1>
+				<button id="append">Append</button>
+				<p id="append_subject">Click button and append "Hello" after to this paragraph</p>				
+			</div>
+			<div class="prac_container">
+				<h1>Attr</h1>
+				<button id="attr">Attr</button>
+				<p id="attr_subject">Click button and get attribute of this paragraph</p>
+				<p id="extra_space_attr"></p>
+			</div>
+			<div class="prac_container">
+				<h1>Before</h1>
+				<button id="before">Before</button>
+				<p id="before_subject">Click button and set "hello" before this paragraph</p>			
+			</div>
+			<div class="prac_container">
+				<h1>HTML</h1>
+				<button id="html">HTML</button>
+				<p id="html_subject">Click button and get attribute of this paragraph (showing txt utilize html)</p>
+				<p id="extra_space_html"></p>
+			</div>
+			<div class="prac_container">
+				<h1>text</h1>
+				<button id="text">text</button>
+				<p id="text_subject"><b>Click button</b> and substituted of this paragraph by iteslf(setter and getter)</p>
+			</div>
+			<div class="prac_container">
+				<h1>Val</h1>
+				<button id="val">Val</button>
+				<select id="val_subject">
+					<option>Single</option>
+					<option>Single2</option>
+				</select>
+				<p id="extra_space_val"></p>
+			</div>
+			<div class="prac_container">
+				<h1>Toggle</h1>
+				<button id="toggle">toggle</button>
+				<p id="toggle_subject">toggle me </p>
+			</div>
+			<div class="prac_container">
+				<h1>Hide and show</h1>
+				<button id="hide">hide</button>
+				<button id="show">show</button>
+				<p id="hide_subject"> hide me </p>
+			</div>
+			<div class="prac_container">
+				<h1>Slides</h1>
+				<button id="slide_down">slide down</button>
+				<button id="slide_toggle">slide toggle</button>
+				<button id="slide_up">slide up</button>
+				<p id="slide_subject"> slide me </p>
+			</div>
+			<div class="prac_container">
+				<h1>Fade</h1>
+				<button id="fade_in">fade in</button>
+				<button id="fade_out">fade out</button>
+				<p id="fade_subject"> Fade me </p>
+				<div id="obj1"></div>
+			</div>
+			<div class="prac_container">
+				<h1>Slides</h1>
+				<button id="focus">Focus</button>
+				<label for="survey_name">Name:</label>
+   				<input type="text" id="survey_name" name="name">
+			</div>
+			<div class="prac_container">
+
+			</div>
+			<div class="prac_container">
+
+			</div>
+			<div class="prac_container">
+
+			</div>
+			<div class="prac_container">
+
+			</div>
+			<div class="prac_container">
+
+			</div>
+		</div>
+	</body>
+</html>
