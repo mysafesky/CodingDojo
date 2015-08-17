@@ -1,0 +1,14 @@
+*{
+   margin: 0px;
+   padding: 0px;
+}
+
+img{
+	display: block;
+}
+
+#main_container h1{
+	text-align: center;
+	margin: auto;
+}
+

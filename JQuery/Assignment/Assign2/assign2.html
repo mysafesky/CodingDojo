@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8" >
+		<title>Disappearing Ninja</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+  				$('img').click(function(){
+          			$(this).hide();
+  				})
+
+  				$('#show').click(function(){
+          			$("img").show();
+  				})
+  			})
+		</script>
+	</head>
+	<body>
+		<div id="main_container">
+			<h1 class="title">Disappearing Ninja</h1>
+			<div class="placeholder"><img src="PrinzEugen.jpg" alt="hided"></div>
+			<div class="placeholder"><img src="PrinzEugen.jpg" alt="hided"></div>
+			<div class="placeholder"><img src="PrinzEugen.jpg" alt="hided"></div>
+			<div class="placeholder"><img src="PrinzEugen.jpg" alt="hided"></div>
+			<div class="placeholder"><img src="PrinzEugen.jpg" alt="hided"></div>
+			<div class="placeholder"><img src="PrinzEugen.jpg" alt="hided"></div>
+			<div class="placeholder"><img src="PrinzEugen.jpg" alt="hided"></div>
+			<div class="placeholder"><img src="PrinzEugen.jpg" alt="hided"></div>
+			<div class="placeholder"><img src="PrinzEugen.jpg" alt="hided"></div>
+			<button id="show">show</button>
+		</div>
+	</body>
+</html>
