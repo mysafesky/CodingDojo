@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8" >
+		<title>Form</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+  				$('#add_user').submit(function() {
+  					var result = $(this).serialize();
+					//console.log($(this).serialize());
+					//alert(result);
+
+					var firstName = $('#first_name').val();
+					var lastName = $('#last_name').val();
+					var emailAddress = $('#email').val();
+					var contactNumber = $('#contact_number').val();
+
+					var binder='<tr><td>'+firstName+'</td><td>'+lastName+'</td><td>'+emailAddress+'</td><td>'+contactNumber+'</td></tr>';
+					$('table > tbody:last-child').append(binder);
+					return false;
+				});
+  			})
+		</script>
+	</head>
+	<body>
+		<div id="main_container">
+			<table>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th> 
+					<th>Email Address</th>
+					<th>Contact Number</th>
+				</tr>
+			</table>
+			<div id="form_container">
+				<h1>Add User</h1>
+				<form id="add_user">
+					<label for="first_name">First Name:</label>
+					<input id="first_name" type="text" name="first_name">
+					<label for="last_name">Last Name:</label>
+					<input id="last_name" type="text" name="last_name">
+					<label for="email">Email Address:</label>
+					<input id="email"type="text" name="email">
+					<label for="contact_number">Contact#:</label>
+					<input id="contact_number" type="contact_number" name="contact_number">
+					<input class="submit_btn" type="submit" name="add_user" value="Add User">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

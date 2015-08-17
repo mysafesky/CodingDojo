@@ -1,0 +1,43 @@
+*{
+   margin: 0px;
+   padding: 0px;
+}
+
+img{
+	display: block;
+}
+
+table{
+	margin:10px;
+	border:1px solid rgb(0,0,0);
+}
+
+th,td{
+	padding:5px;
+}
+
+#form_container{
+	display: block;
+	width: 500px;
+	margin-top: 100px;
+}
+
+
+#form_container h1{
+	border-bottom: 1px solid rgb(0,0,0);
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+#add_user label{
+	display: inline-block;
+	width: 200px;
+	text-align: right;
+	margin-bottom: 5px;
+}
+
+#add_user .submit_btn{
+	display: block;
+	margin-top: 30px;
+	margin-left: 275px;
+}
