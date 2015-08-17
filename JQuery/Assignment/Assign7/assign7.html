@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" >
+		<title>Drag</title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  		<link rel="stylesheet" type="text/css" href="style.css">
+  		<script type="text/javascript">
+			$(document).ready(function(){
+  				$("#main_container").sortable();
+				$("#main_container").disableSelection();
+  			})
+		</script>
+	</head>
+	<body>
+		<ul id="main_container">
+			<li><img src="img/ninja0.png" alt="img/cat0.png"></li>
+			<li><img src="img/ninja1.png" alt="img/cat1.png"></li>
+			<li><img src="img/ninja2.png" alt="img/cat2.png"></li>
+			<li><img src="img/ninja3.png" alt="img/cat3.png"></li>
+			<li><img src="img/ninja4.png" alt="img/cat4.png"></li>
+		</ul>
+	</body>
+</html>

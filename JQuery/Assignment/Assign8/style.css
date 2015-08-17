@@ -1,0 +1,14 @@
+*{
+   margin: 0px;
+   padding: 0px;
+}
+
+h1{
+	text-align: center;
+	margin: auto;
+}
+
+#accordion, #tabs{
+	width: 500px;
+}
+

@@ -1,53 +1,75 @@
-<!DOCTYPE html>
-<html>
-	<head lang="en">
-		<meta charset="utf-8" >
-		<title>Form</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-		<script type="text/javascript">
+<html>	
+	<head>
+	<title>The Codingdojo ColorClicker!</title>
+ 		<script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script> 
+ 		<script type="text/javascript">
+			function random_color()
+			{
+				var rgb = ['a','b','c','d','e','f','0','1','2','3','4','5','6','7','8','9'];
+				color = '#'  //this is what we'll return!
+				for(var i = 0; i < 6; i++) 
+				{
+					 x = Math.floor((Math.random()*16))
+					 color += rgb[x]; 
+				};
+				return color;
+			}
 			$(document).ready(function(){
-  				$('#add_user').submit(function() {
-  					var result = $(this).serialize();
-					//console.log($(this).serialize());
-					//alert(result);
-
-					var firstName = $('#first_name').val();
-					var lastName = $('#last_name').val();
-					var emailAddress = $('#email').val();
-					var contactNumber = $('#contact_number').val();
-
-					var binder='<tr><td>'+firstName+'</td><td>'+lastName+'</td><td>'+emailAddress+'</td><td>'+contactNumber+'</td></tr>';
-					$('table > tbody:last-child').append(binder);
-					return false;
-				});
-  			})
-		</script>
+				$('#large_box').click(function(){
+					$(this).css("background-color","yellow")
+					$(this).children('div').css("background-color","red");
+					//alert('you clicked the big box!');  
+				})
+				$('.side_box').click(function(event){
+					event.stopPropagation();
+					// *** If sibling is all small box
+					$(this).siblings('div').css("background-color","grey");
+					// *** If sibling is all side box
+					// $(this).siblings('.side_box').css("background-color","grey");
+				})
+				$('.middle_box').click(function(event){
+					event.stopPropagation();
+					$(this).parent('div').css("background-color","pink")
+				})
+			});
+ 		</script>
+ 		<style type="text/css">
+	 		*
+			{
+				font-family: sans-serif;
+			}
+			h2, h1, h3
+			{
+				text-align: center;
+			}
+			#large_box
+			{
+				margin: 0px auto;
+				margin-top: 30px;
+				background-color: lightblue;
+				width: 1200px;
+				height: 300px; 
+			}
+			#large_box div
+				{
+				background-color: blue;
+				display: inline-block;
+				width: 350px;
+				height: 130px;
+				margin: 60px 20px;
+			}
+		</style>
 	</head>
 	<body>
-		<div id="main_container">
-			<table>
-				<tr>
-					<th>First Name</th>
-					<th>Last Name</th> 
-					<th>Email Address</th>
-					<th>Contact Number</th>
-				</tr>
-			</table>
-			<div id="form_container">
-				<h1>Add User</h1>
-				<form id="add_user">
-					<label for="first_name">First Name:</label>
-					<input id="first_name" type="text" name="first_name">
-					<label for="last_name">Last Name:</label>
-					<input id="last_name" type="text" name="last_name">
-					<label for="email">Email Address:</label>
-					<input id="email"type="text" name="email">
-					<label for="contact_number">Contact#:</label>
-					<input id="contact_number" type="contact_number" name="contact_number">
-					<input class="submit_btn" type="submit" name="add_user" value="Add User">
-				</form>
-			</div>
+		<h1>The Codingdojo ColorClicker! </h1>
+		<div id='large_box'>
+			<div class='side_box'></div>
+			<div class='middle_box'></div>
+			<div class='side_box'></div>
 		</div>
+		<h2>Rules</h2>
+		<h3>1. Clicking the big box should change background colors of both the small and large boxes!</h3>
+		<h3>2. Clicking the middle small box should change the color of the big box!</h3>
+		<h3>3. Clicking the left or right small box should change the color of that box's siblings</h3>
 	</body>
 </html>
