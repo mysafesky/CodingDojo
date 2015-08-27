@@ -1,0 +1,2 @@
+1. In MySQL database what is indexes and triggers
+

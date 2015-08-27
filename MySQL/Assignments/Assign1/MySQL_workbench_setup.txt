@@ -1,0 +1,28 @@
+1. Connect to local host
+
+	Via mac terminal
+	$Zhengchengs-MacBook-Pro:hawk zcgu$ mysql --user=root --password=root
+
+	Via MySQL Workbench
+	Create a new connection to 127.0.0.1:3306
+	Set user name = root
+	Set passwork = root
+
+2. USE Specific Schema
+	
+	I have some prepared schema in my local host. Therefore I type following command in MySQL Workbench shell
+
+	$ USE StockHistory;
+
+3. Do a simple query
+
+	-- Do a general Select
+	SELECT * FROM Stock_data;
+	-- Select specific data with symbol="000006"
+	SELECT *
+	FROM Stock_data
+	WHERE Symbol="000006";
+	-- Aggregate the volume for symbol="000006"
+	SELECT Symbol, Sum(Volume)
+	FROM Stock_data
+	WHERE Symbol="000006";
